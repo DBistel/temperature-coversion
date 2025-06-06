@@ -1,7 +1,25 @@
 const convertToCelsius = (Fahrenheit) => {
-    return ( Fahrenheit - 32 ) * (5/9);
+    let result = ( Fahrenheit - 32 ) * (5/9);
+    return result.toFixed(1)
 }
-const celsius = convertToCelsius(76)
+const Celsius = convertToCelsius(76)
+//console.log(Celsius)
 
+const describeTemperature = (Fahrenheit) => {
+    let Celsius = convertToCelsius (Fahrenheit)
+    if (Celsius < 0){
+        return `The current temperature is ${Fahrenheit}°F/ ${Celsius}°C, it is very cold`
+    } else if (Celsius < 20){
+         return `The current temperature is ${Fahrenheit}°F/ ${Celsius}°C, it is cold`
+    } else if (Celsius < 30){
+         return `The current temperature is ${Fahrenheit}°F/ ${Celsius}°C, it is warm`
+    } else if (Celsius < 40){
+         return `The current temperature is ${Fahrenheit}°F/ ${Celsius}°C, it is hot`
+    } else {
+         return `The current temperature is ${Fahrenheit}°F/ ${Celsius}°C, it is very hot`
+    }
 
-console.log(celsius)
+};
+let temperature = describeTemperature(110);
+//console.log(temperature);
+
