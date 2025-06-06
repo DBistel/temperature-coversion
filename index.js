@@ -27,4 +27,7 @@ let person = prompt("Please enter the temperature in Fahrenheit", "°F");
 //const Temp = parseFloat(person)
 const temperature = describeTemperature(parseFloat(person))
 //parseFloat can be nested into the describeTemperature function.
-console.log(temperature)
+//console.log(temperature)
+alert (temperature)
+
+
